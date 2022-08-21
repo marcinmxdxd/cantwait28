@@ -10,4 +10,8 @@ class ItemModel {
     required this.releaseDate,
     required this.id,
   });
+
+  String daysLeft() {
+    return releaseDate.difference(DateTime.now()).inDays.toString();
+  }
 }
